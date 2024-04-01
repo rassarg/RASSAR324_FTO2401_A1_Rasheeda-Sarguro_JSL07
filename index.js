@@ -25,13 +25,14 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
     // Added this condition so that only valid student names are added
-    if (!/^[a-zA-Z \p{M}'-]+$/u.test(studentName.trim())) { //it allows spaces, hyphens & apostrophes. u = allows unicode characters (ie letters like ñ) while \p{M} prevents non-alphabetic char like emojis
+    if (!/^[\p{L} \-'’]+$/u.test(studentName.trim())) { //it allows spaces, hyphens & apostrophes. p{L} allows for any letter from any language
       alert('Please enter a valid student name');
       return;
     }
-  
+
     // Ensure certificateContent element exists before updating its content
     if (!certificateContent) {
+      alert('Certificate unavailable right now. Please try again later.');
       console.error('Certificate content element not found!');
       return;
     }
