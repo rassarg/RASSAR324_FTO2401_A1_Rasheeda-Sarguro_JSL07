@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
 
-    // Ensure certificateContent element exists before updating its content
+    // Added this to ensure that the certificateContent element exists before updating its content
     if (!certificateContent) {
       alert('Certificate unavailable right now. Please try again later.');
       console.error('Certificate content element not found!');
