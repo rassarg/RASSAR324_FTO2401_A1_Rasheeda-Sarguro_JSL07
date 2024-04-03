@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const studentName = studentNameInput.value;
     const personalMessage = personalMessageInput.value;
-    const courseName = courseNameInput ? courseNameInput.value : "a course"; // Fallback to "a course" if no input
+    const courseName = courseNameInput.value ? courseNameInput.value : "";  // Fallback if no input - removed required from html
 
     
     if (studentName.trim() === '' || personalMessage.trim() === '') {
